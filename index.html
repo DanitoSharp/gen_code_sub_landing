@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing sub view</title>
-  </head>
-  <body>
     <!-- internal css style -->
     <style>
       /* importing fonts */
@@ -17,16 +15,14 @@
       }
 
       body {
-        margin: 1.1em;
-        font-size: 1.2rem;
+        margin: 1em;
+        font-size: 1.1rem;
         font-family: Outfit;
       }
       section.OurServ {
-        position: relative;
-        top: 0;
         background-color: #f2fafd;
         width: 100%;
-        height: 90vh;
+        height: 160vh;
         animation-name: slide;
         animation-duration: 2s;
       }
@@ -51,10 +47,13 @@
       }
       .servCols {
         display: flex;
+        flex-direction: column;
         margin: 5% 0;
       }
       .servCols-subContainer {
-        margin-left: 5%;
+        width: 82%;
+        height: 35vh;
+        margin: 5% auto;
         padding: 4%;
         background-color: var(--colsColor);
         border: none;
@@ -71,10 +70,11 @@
         max-width: 250px;
       }
       .step {
-        margin: 4.5em;
+        margin: 4.3em 0;
       }
       .step-flexed {
         display: flex;
+        flex-direction: column-reverse;
         justify-content: space-evenly;
       }
       .stepContainer {
@@ -118,11 +118,11 @@
       }
       div.circle-container {
         margin-top: 5%;
-        margin-left: 20%;
-        opacity: 0%;
+        margin-left: 0%;
+        opacity: 100%;
         animation-name: circle;
         animation-duration: 10s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 1;
       }
 
       /* Circle image animation */
@@ -138,13 +138,149 @@
         }
       }
       div.circle-container img {
-        width: 90%;
-      }
-      div.flexed-one {
         width: 100%;
       }
-    </style>
+      div.flexed-one {
+        margin: 0;
+        width: 100%;
+      }
 
+      @media only screen and (min-width: 376px) {
+        body {
+          margin: 1.1em;
+          font-size: 1.2rem;
+          font-family: Outfit;
+        }
+        section.OurServ {
+          background-color: #f2fafd;
+          width: 100%;
+          height: 90vh;
+          animation-name: slide;
+          animation-duration: 2s;
+        }
+        /* Slide animation */
+        @keyframes slide {
+          0% {
+            opacity: 0%;
+            transform: translateY(-10px);
+          }
+          100% {
+            opacity: 100%;
+            transform: translateY(10px);
+          }
+        }
+        .textCenter {
+          text-align: center;
+        }
+
+        .textCenter p {
+          margin: auto;
+          max-width: 800px;
+        }
+        .servCols {
+          display: flex;
+          flex-direction: row;
+          margin: 5% 0;
+        }
+        .servCols-subContainer {
+          width: 20%;
+          height: 40vh;
+          margin: auto auto;
+          padding: 4%;
+          background-color: var(--colsColor);
+          border: none;
+          border-radius: 15px;
+        }
+        .servCols-subContainer:hover {
+          --colsColor: #76d4de;
+        }
+        .servCols-subhead {
+          font-size: 1.3em;
+          max-width: 190px;
+        }
+        .servCols-text {
+          max-width: 250px;
+        }
+
+        .step {
+          margin: 4.3em;
+        }
+
+        .step-flexed {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+        .stepContainer {
+          display: flex;
+          animation-name: slideRight;
+          animation-duration: 2s;
+        }
+
+        /* numbered steps slide animation */
+        @keyframes slideRight {
+          0% {
+            opacity: 0%;
+            transform: translateX(-100px);
+          }
+          100% {
+            opacity: 100%;
+            transform: translateX(0px);
+          }
+        }
+        .stepContainer-numb {
+          margin-right: 30px;
+        }
+        .stepContainer-numb p {
+          font-size: 1.3rem;
+          border-radius: 5px;
+          padding: 8px 15px;
+          background-color: var(--numcolor);
+        }
+        .stepContainer:hover {
+          --numcolor: #76d4de;
+        }
+        .stepContainer-subhead {
+          font-size: 1.3em;
+        }
+        .stepContainer-text {
+          margin: 0;
+          max-width: 300px;
+        }
+        .subhead-color {
+          color: #153037;
+        }
+        div.circle-container {
+          margin-top: 5%;
+          margin-left: 20%;
+          opacity: 0%;
+          animation-name: circle;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+        }
+
+        /* Circle image animation */
+        @keyframes circle {
+          0% {
+            opacity: 0%;
+          }
+          50% {
+            opacity: 100%;
+          }
+          100% {
+            opacity: 0%;
+          }
+        }
+        div.circle-container img {
+          width: 90%;
+        }
+        div.flexed-one {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <!-- Our Services section -->
     <section class="OurServ">
       <div class="textCenter">
@@ -256,6 +392,5 @@
         </div>
       </div>
     </section>
-
   </body>
 </html>
