@@ -7,7 +7,9 @@
     <title>Landing sub view</title>
   </head>
   <body>
+    <!-- internal css style -->
     <style>
+      /* importing fonts */
       @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
       :root {
         --numcolor: #f2fafd;
@@ -28,6 +30,7 @@
         animation-name: slide;
         animation-duration: 2s;
       }
+      /* Slide animation */
       @keyframes slide {
         0% {
           opacity: 0%;
@@ -79,6 +82,8 @@
         animation-name: slideRight;
         animation-duration: 2s;
       }
+
+      /* numbered steps slide animation */
       @keyframes slideRight {
         0% {
           opacity: 0%;
@@ -112,12 +117,15 @@
         color: #153037;
       }
       div.circle-container {
+        margin-top: 5%;
         margin-left: 20%;
         opacity: 0%;
         animation-name: circle;
         animation-duration: 10s;
         animation-iteration-count: infinite;
       }
+
+      /* Circle image animation */
       @keyframes circle {
         0% {
           opacity: 0%;
@@ -137,6 +145,7 @@
       }
     </style>
 
+    <!-- Our Services section -->
     <section class="OurServ">
       <div class="textCenter">
         <h2>Our Services</h2>
@@ -177,6 +186,7 @@
       </div>
     </section>
 
+    <!-- steps and circle image -->
     <section class="step">
       <div>
         <h2>Easy steps to create your unique QR code</h2>
