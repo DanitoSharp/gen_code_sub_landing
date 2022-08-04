@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing sub view</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+      :root {
+        --numcolor: #f2fafd;
+        --colsColor: white;
+      }
+
+      body {
+        margin: 1.1em;
+        font-size: 1.2rem;
+        font-family: Outfit;
+      }
+      section.OurServ {
+        position: relative;
+        top: 0;
+        background-color: #f2fafd;
+        width: 100%;
+        height: 90vh;
+        animation-name: slide;
+        animation-duration: 2s;
+      }
+      @keyframes slide {
+        0% {
+          opacity: 0%;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 100%;
+          transform: translateY(10px);
+        }
+      }
+      .textCenter {
+        text-align: center;
+      }
+
+      .textCenter p {
+        margin: auto;
+        max-width: 800px;
+      }
+      .servCols {
+        display: flex;
+        margin: 5% 0;
+      }
+      .servCols-subContainer {
+        margin-left: 5%;
+        padding: 4%;
+        background-color: var(--colsColor);
+        border: none;
+        border-radius: 15px;
+      }
+      .servCols-subContainer:hover {
+        --colsColor: #76d4de;
+      }
+      .servCols-subhead {
+        font-size: 1.3em;
+        max-width: 190px;
+      }
+      .servCols-text {
+        max-width: 250px;
+      }
+      .step {
+        margin: 4.5em;
+      }
+      .step-flexed {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .stepContainer {
+        display: flex;
+        animation-name: slideRight;
+        animation-duration: 2s;
+      }
+      @keyframes slideRight {
+        0% {
+          opacity: 0%;
+          transform: translateX(-100px);
+        }
+        100% {
+          opacity: 100%;
+          transform: translateX(0px);
+        }
+      }
+      .stepContainer-numb {
+        margin-right: 30px;
+      }
+      .stepContainer-numb p {
+        font-size: 1.3rem;
+        border-radius: 5px;
+        padding: 8px 15px;
+        background-color: var(--numcolor);
+      }
+      .stepContainer:hover {
+        --numcolor: #76d4de;
+      }
+      .stepContainer-subhead {
+        font-size: 1.3em;
+      }
+      .stepContainer-text {
+        margin: 0;
+        max-width: 300px;
+      }
+      .subhead-color {
+        color: #153037;
+      }
+      div.circle-container {
+        margin-left: 20%;
+        opacity: 0%;
+        animation-name: circle;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes circle {
+        0% {
+          opacity: 0%;
+        }
+        50% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 0%;
+        }
+      }
+      div.circle-container img {
+        width: 90%;
+      }
+      div.flexed-one {
+        width: 100%;
+      }
+    </style>
+
+    <section class="OurServ">
+      <div class="textCenter">
+        <h2>Our Services</h2>
+        <p>
+          We always want to provide the best value for you. GenCode gives you
+          the best experience while you generate your QR code.
+        </p>
+      </div>
+
+      <div class="servCols">
+        <div class="servCols-subContainer">
+          <p class="servCols-subhead">
+            <strong>Business and Portfolo Visibilty</strong>
+          </p>
+          <p class="servCols-text">
+            We give you an online presence so your customers find on the world
+            wide web. Encrypt your portfolio's URL with us.
+          </p>
+        </div>
+        <div class="servCols-subContainer">
+          <p class="servCols-subhead">
+            <strong>Identity Authentication</strong>
+          </p>
+          <p class="servCols-text">
+            We provide you with an internet presence so that customers may
+            locate you online. Wecan encrypt the URL for your portfolio.
+          </p>
+        </div>
+        <div class="servCols-subContainer">
+          <p class="servCols-subhead">
+            <strong>Improved Communication</strong>
+          </p>
+          <p class="servCols-text">
+            Confidential messages, information and the most sensitive
+            documentaion can be communicated in text.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step">
+      <div>
+        <h2>Easy steps to create your unique QR code</h2>
+      </div>
+      <div class="step-flexed">
+        <div class="flexed-one">
+          <div class="stepContainer">
+            <div class="stepContainer-numb">
+              <p><strong>1</strong></p>
+            </div>
+            <div>
+              <p class="stepContainer-subhead">
+                <strong>Register</strong>
+              </p>
+              <p class="stepContainer-text">
+                Create an account in order to generate your QR code.
+              </p>
+            </div>
+          </div>
+          <div class="stepContainer">
+            <div class="stepContainer-numb subhead-color">
+              <p>
+                <strong>2</strong>
+              </p>
+            </div>
+            <div>
+              <p class="stepContainer-subhead subhead-color">
+                <strong>Input</strong>
+              </p>
+              <p class="stepContainer-text">
+                Choose the file you want to encrypt and input into the screen.
+              </p>
+            </div>
+          </div>
+          <div class="stepContainer">
+            <div class="stepContainer-numb subhead-color">
+              <p><strong>3</strong></p>
+            </div>
+            <div>
+              <p class="stepContainer-subhead">
+                <strong>Download</strong>
+              </p>
+              <p class="stepContainer-text">
+                Download your QR code in your preferred format after it has been
+                generated.
+              </p>
+            </div>
+          </div>
+          <div class="stepContainer">
+            <div class="stepContainer-numb subhead-color">
+              <p><strong>4</strong></p>
+            </div>
+            <div>
+              <p class="stepContainer-subhead">
+                <strong>Save</strong>
+              </p>
+              <p class="stepContainer-text">
+                You can choose to save in your unique platform and view all the
+                time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="circle-container">
+          <img src="/Images/dunsineasy step circle.png" alt="GenCodeCircle" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
